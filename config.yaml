@@ -1,0 +1,23 @@
+os_type: windows
+host_id: my-machine-01
+
+database:
+  path: thhunt.db
+
+llm:
+  provider: ollama
+  base_url: http://localhost:11434
+  model: llama3
+  timeout: 30
+
+collectors:
+  process_interval_seconds: 5
+  network_interval_seconds: 10
+
+detection:
+  rules_path: thhunt/rules
+  enable_anomaly_detection: true
+
+api:
+  host: 127.0.0.1
+  port: 9999

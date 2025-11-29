@@ -1,0 +1,13 @@
+name: Suspicious Process in Temp
+description: Detects processes running from temporary directories
+severity: 8
+conditions:
+  category: process
+  process_path_contains: "Temp"
+---
+name: PowerShell Execution
+description: Detects PowerShell execution
+severity: 5
+conditions:
+  category: process
+  process_name: "powershell"
